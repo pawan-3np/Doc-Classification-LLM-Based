@@ -1,0 +1,50 @@
+ai-pdf-document-splitter
+GitHub: zarifaziz/ai-pdf-document-splitter
+Description: Uses text analysis, embeddings, hierarchical clustering, and post‑processing to separate multi-document PDFs into individual files. 
+GitHub
+
+Pros: Closest to what you’re building; supports embedding + clustering; has a Streamlit UI.
+How to adapt: You could replace or augment its clustering logic with your supervised classifier or better feature weighting.
+
+Document Classifier & Splitter (AWS sample)
+GitHub: aws-samples/aws-document-classifier-and-splitter
+Description: This uses AWS Comprehend custom classification to classify pages / segments, then splits documents accordingly. 
+GitHub
+
+Pros: Uses a classification model which is closer to your supervised idea.
+Limitations: It’s tied to AWS services; may require adaptation to your local pipeline.
+
+Document Classification & Data Extraction
+GitHub: PrincySinghal/Document-classification-and-Data-extraction
+Description: Splits & classifies documents in a PDF/image into classes (ID docs etc.), then extracts information. 
+GitHub
+
+Use case: Particularly useful if your documents are of certain known classes (invoices, ID cards, forms, etc.).
+
+pdf-splitter (Ling0925)
+GitHub: Ling0925/pdf-splitter
+Description: A PDF splitting tool with UI, plus “smart barcode detection” to detect split points. 
+GitHub
+
+Note: This is more of a UI/utility tool than a semantic splitter, but interesting for hybrid splitting (barcode + content).
+
+PDF Splitter (Davaryancha)
+GitHub: davaryancha/pdf-splitter
+Description: A simple Python tool that splits a PDF into per-page files. 
+GitHub
+
+Use: For baseline splitting (every page as own file). You can build logic on top.
+
+SelfDocSeg
+GitHub linked in paper: SelfDocSeg: A Self-Supervised vision-based Approach towards Document Segmentation
+Description: Does document layout segmentation using vision-based features (self-supervised). 
+arXiv
+
+Use: You could use it as a module for detecting boundaries (sections) rather than whole pages.
+
+Docsplit
+Project: Docsplit (Ruby / command-line tool)
+Description: Splits documents into pages, metadata, thumbnails, runs OCR if needed. 
+documentcloud.github.io
+
+Use: For foundational splitting + OCR; less about semantic boundaries.
